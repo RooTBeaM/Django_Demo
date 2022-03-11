@@ -26,4 +26,54 @@ git push -u origin main
 setup django 
 install PostgreSQL & pgAdmin 
 
-django-admin startproject project1 <---- name
+django-admin startproject myblog <---- name
+cd myblog
+
+python manage.py runserver
+python manage.py startapp blogapp
+
+*************setting admin *************
+
+#### models.py
+class Blog(models.Model): 
+    title = models.CharField(max_length=120) 
+    post = models.TextField() 
+    date_created = models.DateTimeField() 
+    date_updated = models.DateTimeField()
+
+### sitting.py
+
+INSTALLED_APPS = [
+    'blogapp', <<<< addd here
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+<<<<< replace and PASSWORD == database PASSWORD
+DATABASES = { 
+    'default': { 
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'webblog',
+        'USER': 'postgres',
+        'PASSWORD': '123456', 
+        'HOST': '127.0.0.1',
+        'PORT': '5432', 
+        }
+}
+
+### DATABASES in pgAdmin
+create database 
+
+pip install psycopg2
+
+python manage.py makemigrations
+python manage.py migrate
+
+
+
+
+
