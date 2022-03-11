@@ -1,0 +1,29 @@
+***** SET Env *****
+mkdir *name folder  <--- create Project folder
+cd *name folder
+python -m venv env  <---- * env just a name
+env\Scripts\activate <--- env
+
+pip install django
+pip freeze      <--- check library
+
+install git
+    git --version
+    git config --global user.email "you@example.com" <---- github
+    git config --global user.name "Your Name"<---github
+    git config --list <--- check email & user name
+
+
+connect vs code to github
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/zueyangzein/Django_Demo.git
+git push -u origin main
+
+setup django 
+install PostgreSQL & pgAdmin 
+
+django-admin startproject project1 <---- name
