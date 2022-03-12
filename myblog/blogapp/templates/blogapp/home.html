@@ -1,11 +1,22 @@
-<!DOCTYPE html>
-<html>
+{% extends 'blogapp\base.html' %}
 
-<head>
-    <title>Homepage!!!!</title>
-</head>
 
-<body>
-    <h1>Hello, My First Page in DjangO!!!</h1>
-</body>
-</html>
+{% block title %}
+    <title>Home</title>
+{% endblock title %}
+    
+
+{% block content %}
+<div class="container">
+    <div>
+        <br>
+        <h1 style= "color: brown; text-align: center;">Hello, My First Page in DjangO!!!</h1>
+        <br>
+        <h1 style="text-align: center;">Hello, This is My Landing Page</h1>
+        <br>
+        <br>
+        <p style="font-size: large; text-align: center;color: brown">{{today}}</p>
+    </div>
+</div>
+{% endblock content %}
+    
