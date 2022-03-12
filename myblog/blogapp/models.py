@@ -5,3 +5,6 @@ class Blog(models.Model):
     post = models.TextField() 
     date_created = models.DateTimeField() 
     date_updated = models.DateTimeField()
+
+    def __str__(self):
+        return self.title
