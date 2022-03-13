@@ -17,6 +17,17 @@
         <br>
         <p style="font-size: large; text-align: center;color: brown">{{today}}</p>
     </div>
+    <br>
+    <div>
+        <h2 style="text-align: center;">All DATA</h2><br>
+        {% for item in posts %}
+        <ul style="text-align: center;">
+            <img src="{{item.feild_img.url}}" alt="{{item.title}}" width="200" height="150">
+            <p style="font-weight: bold;">Title : {{item.title}}</p>
+            <p style="text-align: center;">Post : {{item.post}}</p>
+            <p>Created Date : {{item.date_created}}</p>
+        </ul>
+        {% endfor %}
+    </div>
 </div>
 {% endblock content %}
-    
