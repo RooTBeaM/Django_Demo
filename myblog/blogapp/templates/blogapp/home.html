@@ -24,8 +24,9 @@
         <ul style="text-align: center;">
             <img src="{{item.feild_img.url}}" alt="{{item.title}}" width="200" height="150">
             <p style="font-weight: bold;">Title : {{item.title}}</p>
-            <p style="text-align: center;">Post : {{item.post}}</p>
+            <p style="text-align: center;">Post : {{item.post | safe}}</p>
             <p>Created Date : {{item.date_created}}</p>
+            <a class="btn btn-primary" href="/post-details/{{item.id}}" type="button">See more</a><br>
         </ul>
         {% endfor %}
     </div>
