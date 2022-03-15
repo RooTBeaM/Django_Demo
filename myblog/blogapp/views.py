@@ -40,3 +40,8 @@ def query_data(request):
                                                 'first_row': first_row,
                                                 'last_row': last_row
                                                 })
+
+def post_details(request, id):
+    today = datetime.now()
+    single_row = Blog.objects.get(pk=id)
+    return render(request, "blogapp/post_details.html", {'single_row':single_row, 'today':today})
